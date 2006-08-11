@@ -1,0 +1,93 @@
+.TH midifilter 1 "August 11th, 2006" "midifilter(1)" "Klever Group (http://www.klever.net/)"
+.hla en
+
+.SH NAME
+
+midifilter \- Standard MIDI File filter
+
+.SH SYNOPSYS
+
+\fBmidifilter\fR
+[\fB-h\fR | \fB--help\fR | \fB--usage\fR]
+[\fB-V\fR | \fB--version\fR]
+[\fB-L\fR | \fB--license\fR]
+[\fB-f\fR \fI<filters>\fR | \fB--filter=\fI<filters>\fR]
+[\fB-l\fR | \fB--list-filters\fR]
+[<input-file>[ <output-file>]]
+
+.SH DESCRIPTION
+
+midifilter simply strips unwanted events from the Standard MIDI File. You may
+wish to strip some certain events if you know the events may break whatever
+will do any further processing of the file or just to reduce file size.
+
+if you want to load file from standard input or dump results to standard output
+just omit corresponding file or specify '-'.
+
+.SH OPTIONS
+
+.TP
+\fB-h\fR, \fB--help\fR, \fB--usage\fR
+Display short usage message and exit.
+.TP
+\fB-V\fR, \fB--version\fR
+Report version and exit.
+.TP
+\fB-L\fR, \fB--license\fR
+Show licensing terms.
+.TP
+\fB-f\fR \fI<filters>\fR, \fB--filter=\fI<filters\fR
+Specify the list of comma-separated filters to apply.
+.TP
+\fB-l\fR, \fB--list-filters\fR
+List available filters.
+
+.SH EXAMPLE
+
+.TP
+.nf
+\fBmidi2f0\fR midifile.mid \\
+| \fBmidifilter\fR \fB-f\fR \fBsysex,meta_unknown,meta_obsolete,meta_texts\fR \\
+>/mnt/card/casio_md/midifile.mid
+.fi
+
+This command converts file to SMF0 file, strips events not understood and not
+used by the keyboard and puts it to the memory card.
+
+.SH EXIT STATUS
+
+Zero in case of success, non-zero otherwise.
+
+.SH AUTHOR
+
+Written by Michael 'hacker' Krelin <hacker@klever.net>
+
+.SH COPYRIGHT
+
+Copyright (c) 2006 Klever Group (http://www.klever.net/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+.SH BUGS
+
+You tell me. Send reports to <midillo-bugs@klever.net>
+
+.SH SEE ALSO
+\fBmidi2f0\fR(1)
+\fBmididump\fR(1)

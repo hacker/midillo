@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: midillo
+Description: C++ midi manipulation library
+Version: @VERSION@
+Requires: konforka
+Libs: -L${libdir} -lmidillo
+Cflags: -I${includedir}

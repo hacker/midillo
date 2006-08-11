@@ -1,0 +1,11 @@
+Makefile.in
+*.o
+midifilter
+midi2f0
+mididump
+.libs
+.deps
+Makefile
+COPYING.cc
+filters_enumeration.cc
+filters_definition.cc

@@ -1,0 +1,36 @@
+system:system:strip all system messages
+meta:meta:strip all meta events (except for EOT)
+
+sysex:sysex:strip sysex messages
+MTC_quarter_frame:MTC_quarter_frame/quarter_frame:strip 'MTC quarter frame' messages
+song_position_pointer:song_position_pointer:strip 'song position pointer' messages
+song_select:song_select:strip 'song select' messages
+tune_request:tune_request:strip 'tune request' messages
+
+midi_clock:midi_clock/timing_clock:strip 'midi clock' messages
+midi_tick:midi_tick:strip 'midi tick' messages
+midi_start:midi_start/start:strip 'midi start' messages
+midi_continue:midi_continue/continue:strip 'midi continue' messages
+midi_stop:midi_stop/stop:strip 'midi stop' messages
+active_sense:active_sense:strip 'active sense' messages
+
+meta_sequence_number:meta_sequence_number:strip 'sequence number' meta events
+meta_text:meta_text:strip 'text' meta events
+meta_copyright:meta_copyright:strip 'copyright' meta events
+meta_seq_track_name:meta_seq_track_name:strip 'sequence track name' meta events
+meta_instrument:meta_instrument:strip 'instrument' meta events
+meta_lyric:meta_lyric/meta_lyrics:strip 'lyric' meta events
+meta_marker:meta_marker:strip 'marker' meta events
+meta_cue_point:meta_cue_point:strip 'cue point' meta events
+meta_patch_name:meta_patch_name/meta_program_name:strip 'patch name' meta events
+meta_port_name:meta_port_name/meta_device_name:strip 'port name' meta events
+meta_tempo:meta_temp:strip 'tempo' meta events
+meta_SMPTE_offset:meta_SMPTE_offset:strip 'SMPTE offset' meta events
+meta_time_sig:meta_time_sig:strip 'time signature' meta events
+meta_key_sig:meta_key_sig:strip 'key signature' meta events
+meta_proprietary:meta_proprietary:strip 'proprietary' meta events
+
+meta_midi_channel:meta_midi_channel:strip 'midi channel' meta events
+meta_midi_port:meta_midi_port:strip 'midi port' meta events
+
+meta_unknown:meta_unknown:strip meta events not known by midillo
