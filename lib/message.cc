@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iterator>
+#include <cassert>
 #include <midillo/message.h>
 #include <midillo/util.h>
 #include <midillo/exception.h>

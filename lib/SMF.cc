@@ -2,6 +2,7 @@
 #include <fstream>
 #include <algorithm>
 #include <iterator>
+#include <cstring>
 #include <midillo/SMF.h>
 
 namespace midillo {

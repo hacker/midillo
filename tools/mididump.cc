@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <algorithm>
+#include <cstring>
 using namespace std;
 #include <konforka/exception.h>
 #include <midillo/SMF.h>
